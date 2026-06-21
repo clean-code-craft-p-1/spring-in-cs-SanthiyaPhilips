@@ -3,7 +3,7 @@ name: Statisticker
 on: [push, pull_request]
 
 env:
-  DOTNET_VERSION: '6.0.401'
+  DOTNET_VERSION: '10.0.9'
 
 jobs:
 
@@ -21,11 +21,11 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
